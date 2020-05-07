@@ -1,0 +1,106 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+body
+{
+    background: rgb(82, 156, 199);
+}
+
+.container
+{
+    width: 100%;
+    max-width: 1500px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: repeat(5, auto);
+    grid-template-areas:    "header             header"
+                            "imagen             imagen"
+                            "registration       registration"
+                            "form               form"
+                            "footer             footer";
+}   
+
+.container > header
+{
+    grid-area: header;
+}
+
+.container .navbar
+{
+    border-radius: 4px;
+}
+
+.container .imagen
+{
+    grid-area: imagen;
+    justify-self: stretch;
+    justify-self: center;
+}
+
+.container > h1
+{
+    grid-area: registration;
+    justify-self: stretch;
+    justify-self: center;
+}
+
+.container > form
+{
+    grid-area: form;
+    justify-self: stretch;
+    justify-self: center;
+}
+
+
+
+.container > footer
+{
+    grid-area: footer;
+    justify-self: stretch;
+    justify-self: center;
+}
+
+.container .card
+{
+    grid-area: form;
+    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: stretch;
+    align-self: center;
+}
+
+card
+{
+    justify-content: stretch;
+}
+
+
+
+@media screen and (max-width: 1449px)
+{
+    .container
+    {
+        grid-template-areas:    "header             header"
+                                "imagen             imagen"
+                                "registration       registration"
+                                "form               form"
+                                "footer             footer";
+    }
+}
+
+.container .row
+{
+    grid-area: registration;
+    justify-self: stretch;
+    align-self: center;
+}
+
+
+
+
